@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#EE6E73">
+
+    <title>又一色影视</title>
+
+    <meta name="Keywords" content="视频,电影,欧美电影,国产电影,日本电影,在线视频,手机电影"/>
+    <meta name="Description" content="免费在线电影,手机电影"/>
+    <meta http-equiv="refresh" content="" />
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/materialize/0.97.8/css/materialize.min.css">
+    <style type="text/css">
+        *{margin:0; padding:0;}
+        a{text-decoration: none;}
+        img{max-width: 100%; height: auto;}
+        .weixin-tip{display: none; position: fixed; left:0; top:0; bottom:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80);  height: 100%; width: 100%; z-index: 100;}
+        .weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}
+    </style>
+</head>
+<body>
+<div class="container content center-align" style="height: 400px; margin-top: 100px">
+    <h3 id="h3">正在为您跳转到又一色... </h3>
+
+    <div class="weixin-tip">
+        <p>
+            <img src="https://raw.githubusercontent.com/kujian/weixinTip/master/live_weixin.png" alt="微信打开"/>
+        </p>
+    </div>
+</div>
+
+
+<script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    var nosupport = (/mqqbrowser|micromessenger/i.test(navigator.userAgent.toLowerCase()));
+    nosupport = true;
+    if(nosupport) {
+        var winHeight = $(window).height();
+        $(".weixin-tip").css("height",winHeight);
+        $(".weixin-tip").show();
+
+    } else {
+        location.href = 'http://youyise.com'
+    }
+</script>
+</body>
+</html>
